@@ -16,6 +16,8 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Square door;
+    private Square grass;
 
     /**
      * Constructor for objects of class Picture
@@ -30,27 +32,105 @@ public class Picture
      */
     public void draw()
     {
+        grass = new Square();
+        grass.moveVertical(190);
+        grass.moveHorizontal(-60);
+        grass.changeSize(150);
+        grass.changeColor("green");
+        grass.makeVisible();
+        
+        grass = new Square();
+        grass.moveVertical(190);
+        grass.moveHorizontal(60);
+        grass.changeSize(150);
+        grass.changeColor("green");
+        grass.makeVisible();
+        
+        grass = new Square();
+        grass.moveVertical(190);
+        grass.moveHorizontal(90);
+        grass.changeSize(150);
+        grass.changeColor("green");
+        grass.makeVisible();
+        
+        
+        
         wall = new Square();
-        wall.moveVertical(80);
-        wall.changeSize(100);
+        wall.moveVertical(50);
+        wall.changeSize(180);
+        wall.changeColor("magenta");
         wall.makeVisible();
+        
+        
+        
 
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(20);
-        window.moveVertical(100);
+        window.moveVertical(70);
         window.makeVisible();
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(20);
+        window.moveVertical(115);
+        window.makeVisible();
+        
+        
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(130);
+        window.moveVertical(70);
+        window.makeVisible();
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(130);
+        window.moveVertical(115);
+        window.makeVisible();
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(130);
+        window.moveVertical(155);
+        window.makeVisible();
+        
+        door=new Square();
+        door.changeColor("black");
+        door.moveHorizontal(75);
+        door.moveVertical(90);
+        door.makeVisible();
+        
+        door=new Square();
+        door.changeColor("black");
+        door.moveHorizontal(20);
+        door.moveVertical(155);
+        door.makeVisible();
+        
+        door=new Square();
+        door.changeColor("red");
+        door.moveHorizontal(75);
+        door.moveVertical(200);
+        door.makeVisible();
+        
+        door=new Square();
+        door.changeColor("red");
+        door.moveHorizontal(75);
+        door.moveVertical(170);
+        door.makeVisible();
 
         roof = new Triangle();
-        roof.changeSize(50, 140);
-        roof.moveHorizontal(60);
-        roof.moveVertical(70);
+        roof.changeSize(100, 180);
+        roof.moveHorizontal(100);
+        roof.moveVertical(-15);
+        roof.changeColor("blue");
         roof.makeVisible();
 
         sun = new Circle();
         sun.changeColor("yellow");
-        sun.moveHorizontal(180);
-        sun.moveVertical(-10);
+        sun.moveHorizontal(195);
+        sun.moveVertical(-55);
         sun.changeSize(60);
         sun.makeVisible();
     }
